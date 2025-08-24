@@ -1,11 +1,7 @@
-/* Removed all Tailwind imports and complex CSS that requires LightningCSS */
-/* This file is kept minimal to avoid LightningCSS processing issues */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
+/* Removed problematic imports and custom variants that cause LightningCSS errors */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
