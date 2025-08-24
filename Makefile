@@ -12,8 +12,8 @@ run: ## Run the application
 supply: ## Get the current USDC supply
 	pnpm exec ts-node --project tsconfig.json scripts/get-supply.ts
 
-show_mint: ## Show USDC mints between two blocks. Usage: make show_mint FROM_BLOCK=1 TO_BLOCK=2
+show_mint: ## Show USDC mints between two blocks. Usage: make show_mint [FROM_BLOCK=...] [TO_BLOCK=...]
 	@pnpm exec ts-node --project tsconfig.json scripts/show-mints.ts $(FROM_BLOCK) $(TO_BLOCK)
 
-show_burn: ## Show USDC burns between two blocks. Usage: make show_burn FROM_BLOCK=1 TO_BLOCK=2
+show_burn: ## Show USDC burns between two blocks. Usage: make show_burn [FROM_BLOCK=...] [TO_BLOCK=...]
 	@pnpm exec ts-node --project tsconfig.json scripts/show-burns.ts $(FROM_BLOCK) $(TO_BLOCK)

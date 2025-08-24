@@ -43,19 +43,19 @@ async function getLogs(fromBlock: number, toBlock: number, topics: (string | nul
     },
   ]);
 
-  return Promise.all(
-    logs.map(async (log) => {
-      const block = await getBlockByHash(log.blockHash);
-      return {
-        to: `0x${log.topics[2].slice(-40)}`,
-        from: `0x${log.topics[1].slice(-40)}`,
-        amount: Number(BigInt(log.data)) / 1e6,
-        txHash: log.transactionHash,
-        blockNumber: Number(log.blockNumber),
-        timestamp: new Date(Number(BigInt(block.timestamp)) * 1000),
-      };
-    })
-  );
+  console.log(`Received ${logs.length} logs from eth_getLogs.`);
+
+  const processedLogs = [];
+  for (const log of logs) {
+    processedLogs.push({
+      to: `0x${log.topics[2].slice(-40)}`,
+      from: `0x${log.topics[1].slice(-40)}`,
+      amount: Number(BigInt(log.data)) / 1e6,
+      txHash: log.transactionHash,
+      blockNumber: Number(log.blockNumber),
+    });
+  }
+  return processedLogs;
 }
 
 export function getMints(fromBlock: number, toBlock: number) {
