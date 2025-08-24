@@ -1,4 +1,3 @@
-
 export async function getUsdcSupply() {
   const apiKey = process.env.GROVE_PORTAL_API_KEY;
   const appId = process.env.GROVE_PORTAL_APP_ID;

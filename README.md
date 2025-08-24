@@ -13,15 +13,15 @@ Any changes you make to your deployed app will be automatically pushed to this r
 ## Getting Started
 
 1. **Install dependencies**
-   ```
+   \`\`\`
    pnpm install
-   ```
+   \`\`\`
 2. **Set up environment variables**
    Create a `.env` file and add the necessary environment variables. You can use `.env.template` as a reference.
 3. **Run the development server**
-   ```
+   \`\`\`
    pnpm dev
-   ```
+   \`\`\`
 
 ## Deployment
 
