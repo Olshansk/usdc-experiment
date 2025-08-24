@@ -10,6 +10,19 @@
 This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
 Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
 
+## Getting Started
+
+1. **Install dependencies**
+   ```
+   pnpm install
+   ```
+2. **Set up environment variables**
+   Create a `.env` file and add the necessary environment variables. You can use `.env.template` as a reference.
+3. **Run the development server**
+   ```
+   pnpm dev
+   ```
+
 ## Deployment
 
 Your project is live at:
